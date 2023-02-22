@@ -13,7 +13,10 @@ function Input({name, label, min, max, value, onChange}: Props) {
 	const dispatch = useAppDispatch()
 	return (
 		<div>
-			<label htmlFor="brillo" className="block">{label}</label>
+			<div className="flex justify-between">
+				<label htmlFor="brillo" className="block">{label}</label>
+				<span>{value}</span>
+			</div>
 			<input
 				onChange={(e) => dispatch(onChange(parseFloat(e.target.value)))}
 				type="range"
