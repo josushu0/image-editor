@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
 	adjustments: false,
-	images: true
+	images: true,
+	downloads: false
 }
 
 export const toolSlice = createSlice({
@@ -12,16 +13,24 @@ export const toolSlice = createSlice({
 		activateAdjustments(state) {
 			state.adjustments = true
 			state.images = false
+			state.downloads = false
 			return state
 		},
 		activateImages(state) {
 			state.adjustments = false
 			state.images = true
+			state.downloads = false
+			return state
+		},
+		activateDownloads(state) {
+			state.adjustments = false
+			state.images = false
+			state.downloads = true
 			return state
 		}
 	}
 })
 
-export const { activateAdjustments, activateImages } = toolSlice.actions
+export const { activateAdjustments, activateImages, activateDownloads } = toolSlice.actions
 
 export default toolSlice.reducer
