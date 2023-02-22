@@ -1,9 +1,11 @@
-import { configureStore } from "@reduxjs/toolkit";
-import toolReducer from "./slices/toolSlice";
+import { configureStore } from "@reduxjs/toolkit"
+import toolReducer from "./slices/toolSlice"
+import imageReducer from "./slices/imageSlice"
 
 export const store = configureStore({
 	reducer: {
-		tool: toolReducer
+		tool: toolReducer,
+		image: imageReducer
 	}
 })
 
