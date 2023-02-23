@@ -8,6 +8,15 @@ A basic image editor that lets upload local images or use [Unsplash](https://uns
 
 **Client:** React, Redux, TailwindCSS
 
+## Environment Variables
+
+To run this project, you will need to create a developer account on Unsplash, create an application and add the API key to the following environment variable in your .env file
+
+`VITE_UNSPLASH_API_KEY=<your-api-key>`
+
+
+
+
 ## Run Locally
 
 Clone the project
