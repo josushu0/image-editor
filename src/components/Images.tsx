@@ -41,9 +41,9 @@ function Images() {
 			</div>
 			<div className="flex flex-col gap-4">
 				<h1 className="font-bold">Buscar en <a href="https://www.unsplash.com">Unsplash</a></h1>
-				<div className="flex border-2 border-neutral-900 dark:border-neutral-100 transition-all rounded-xl">
+				<div className="flex border-2 border-neutral-900 dark:border-neutral-100 rounded-xl">
 					<input onChange={(e) => setQuery(e.target.value)} type="text" placeholder="Buscar..." className="px-2 min-w-0 border-r-2 border-neutral-900 dark:border-neutral-100 bg-transparent outline-none box-shadow-none" />
-					<button onClick={unsplashImages} className="p-2 rounded-r-xl hover:bg-neutral-200">
+					<button onClick={unsplashImages} className="transition-colors p-2 rounded-r-xl hover:bg-neutral-200 dark:hover:bg-neutral-800">
 						<MagnifyingGlassIcon className="h-5" />
 					</button>
 				</div>
@@ -51,11 +51,11 @@ function Images() {
 					<>
 						<Unsplash photos={unsplashPhotos} />
 						<div className="flex items-center justify-between">
-							<button onClick={() => setPage(page - 1)} disabled={page === 1} className="p-2 border-2 border-neutral-900 dark:border-neutral-100 rounded-xl hover:bg-neutral-200 dark:hover:bg-neutral-800">
+							<button onClick={() => setPage(page - 1)} disabled={page === 1} className="transition-colors p-2 border-2 border-neutral-900 dark:border-neutral-100 rounded-xl hover:bg-neutral-200 dark:hover:bg-neutral-800">
 								<ChevronLeftIcon className="h-5" />
 							</button>
 							<span>{page}</span>
-							<button onClick={() => setPage(page + 1)} className="p-2 border-2 border-neutral-900 dark:border-neutral-100 rounded-xl hover:bg-neutral-200 dark:hover:bg-neutral-800">
+							<button onClick={() => setPage(page + 1)} className="transition-colors p-2 border-2 border-neutral-900 dark:border-neutral-100 rounded-xl hover:bg-neutral-200 dark:hover:bg-neutral-800">
 								<ChevronRightIcon className="h-5" />
 							</button>
 						</div>

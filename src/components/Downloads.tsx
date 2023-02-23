@@ -51,15 +51,15 @@ function Downloads() {
 			<h1 className="text-xl font-bold">Opciones de descarga</h1>
 			<div className="flex flex-col">
 				<div className={`flex border-2 border-neutral-900 dark:border-neutral-100 transition-all ${dropdown ? 'rounded-none' : 'rounded-xl'}`}>
-					<button onClick={() => handleDownload()} disabled={!image.src} className="p-2 border-r-2 border-neutral-900 dark:border-neutral-100 grow rounded-l-xl hover:bg-neutral-200 dark:hover:bg-neutral-800 disabled:bg-neutral-200 dark:disabled:bg-neutral-800">{downloadOption}</button>
-					<button onClick={() => setDropdown(!dropdown)} className="flex justify-center items-center p-2 rounded-r-xl hover:bg-neutral-200 dark:hover:bg-neutral-800">
+					<button onClick={() => handleDownload()} disabled={!image.src} className="transition-colors p-2 border-r-2 border-neutral-900 dark:border-neutral-100 grow rounded-l-xl hover:bg-neutral-200 dark:hover:bg-neutral-800 disabled:bg-neutral-200 dark:disabled:bg-neutral-800">{downloadOption}</button>
+					<button onClick={() => setDropdown(!dropdown)} className="transition-colors flex justify-center items-center p-2 rounded-r-xl hover:bg-neutral-200 dark:hover:bg-neutral-800">
 						<ChevronDownIcon className="h-6" />
 					</button>
 				</div>
 				{dropdown &&
 					<>
-						<button onClick={() => handleSelection('PNG')} className="p-2 border-2 border-t-0 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-800">PNG</button>
-						<button onClick={() => handleSelection('JPG')} className="p-2 border-2 border-t-0 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-800">JPG</button>
+						<button onClick={() => handleSelection('PNG')} className="transition-colors p-2 border-2 border-t-0 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-800">PNG</button>
+						<button onClick={() => handleSelection('JPG')} className="transition-colors p-2 border-2 border-t-0 border-neutral-900 dark:border-neutral-100 hover:bg-neutral-200 dark:hover:bg-neutral-800">JPG</button>
 					</>
 				}
 			</div>
