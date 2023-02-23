@@ -4,11 +4,11 @@ import ToolBar from "./components/Toolbar"
 
 function App() {
   return (
-    <main className="flex font-sans accent-neutral-900">
+    <div className="flex font-sans accent-neutral-900 dark:accent-neutral-100 text-neutral-900 dark:text-neutral-100 dark:bg-neutral-900">
       <ToolBar />
       <SideBar />
       <Preview />
-    </main>
+    </div>
   )
 }
 

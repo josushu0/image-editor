@@ -21,7 +21,7 @@ function Preview() {
 		<main tabIndex={-1} className="max-h-screen w-full overflow-scroll relative grid place-items-center">
 			{image.src &&
 				<>
-					<div className="my-4" style={{ maxWidth: image.width + "%" }}>
+					<div style={{ maxWidth: image.width + "%" }}>
 						<img
 							src={image.src}
 							className="w-full"
@@ -31,15 +31,15 @@ function Preview() {
 							}}
 						/>
 					</div>
-					<div className="fixed bottom-4 right-4 flex gap-2 items-center rounded-xl border-2 border-neutral-900 bg-white p-1">
-						<button onClick={handleZoomOut} className="p-1 rounded-xl hover:bg-neutral-200 transition-colors">
+					<div className="fixed bottom-4 right-4 flex gap-2 items-center rounded-xl border-2 border-neutral-900 dark:border-neutral-100 bg-white dark:bg-neutral-900 p-1">
+						<button onClick={handleZoomOut} className="p-1 rounded-xl hover:bg-neutral-200 hover:gb-neutral-800 transition-colors">
 							<span className="sr-only">Acercar imagen</span>
-							<MinusIcon aria-hidden="true" className="w-6 text-neutral-900" />
+							<MinusIcon aria-hidden="true" className="w-6" />
 						</button>
 						<span>Zoom</span>
-						<button onClick={handleZoomIn} className="p-1 rounded-xl hover:bg-neutral-200 transition-colors">
+						<button onClick={handleZoomIn} className="p-1 rounded-xl hover:bg-neutral-200 hover:bg-neutral-800 transition-colors">
 							<span className="sr-only">Alejar imagen</span>
-							<PlusIcon aria-hidden="true" className="w-6 text-neutral-900" />
+							<PlusIcon aria-hidden="true" className="w-6" />
 						</button>
 					</div>
 				</>

@@ -7,7 +7,7 @@ import Images from "./Images"
 function SideBar() {
 	const tool = useAppSelector((state: RootState) => state.tool)
 	return (
-		<aside tabIndex={-1} className="h-screen w-80 border-r-2 border-neutral-200 p-4 overflow-x-scroll">
+		<aside tabIndex={-1} className="h-screen w-80 border-r-2 border-neutral-200 dark:border-neutral-800 p-4 overflow-y-scroll">
 			{ tool.adjustments &&
 				<Adjustments />
 			}

@@ -20,9 +20,9 @@ function Adjustments() {
 			<Input name="sepia" label="Sepia" min={0} max={100} value={image.sepia} onChange={setSepia}/>
 			<button
 				onClick={() => dispatch(reset())}
-				className="border-2 border-neutral-900 rounded-xl p-2 flex gap-2 items-center justify-center hover:bg-neutral-200">
+				className="border-2 border-neutral-900 dark:border-neutral-100 rounded-xl p-2 flex gap-2 items-center justify-center hover:bg-neutral-200 dark:hover:bg-neutral-800">
 				<span>Reiniciar</span>
-				<ArrowUturnLeftIcon aria-hidden="true" className="h-4 text-neutral-900" />
+				<ArrowUturnLeftIcon aria-hidden="true" className="h-4" />
 			</button>
 		</div>
 	)
