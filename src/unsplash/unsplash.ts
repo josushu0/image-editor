@@ -1,5 +1,5 @@
 import { createApi } from "unsplash-js";
 
 export const unsplash = createApi({
-	accessKey: import.meta.env.VITE_UNSPLASHED_API_KEY
+	accessKey: import.meta.env.VITE_UNSPLASH_API_KEY
 })
