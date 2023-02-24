@@ -1,7 +1,7 @@
 
 # Image Editor
 
-A basic image editor that lets upload local images or use [Unsplash](https://unsplash.com) you apply brightness, blur, contrast, opacity, saturation, grayscale, negative and sepia filters.
+A basic image editor that lets you edit local images or images from [Unsplash](https://unsplash.com). You can apply brightness, blur, contrast, opacity, saturation, grayscale, negative and sepia filters to them and download them afterwards.
 
 
 ## Tech Stack
