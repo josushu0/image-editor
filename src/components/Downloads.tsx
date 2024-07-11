@@ -7,7 +7,10 @@ function Downloads() {
 	const [downloadOption, setDownloadOption] = useState('PNG')
 	const [dropdown, setDropdown] = useState(false)
 	const image = useAppSelector((state: RootState) => state.image)
-	let img: HTMLImageElement
+
+	const img: HTMLImageElement = document.createElement('img')
+	img.crossOrigin = "Anonymous"
+	img.src = image.src
 
 	const handleSelection = (selection: string) => {
 		setDownloadOption(selection)
@@ -35,16 +38,6 @@ function Downloads() {
 		link.remove()
 		canvas.remove()
 	}
-
-	useEffect(() => {
-		img = document.createElement('img')
-		img.crossOrigin = "Anonymous"
-		img.src = image.src
-
-		return () => {
-			img.remove()
-		}
-	}, [])
 
 	return (
 		<div className="flex flex-col gap-4">
